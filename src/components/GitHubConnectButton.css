@@ -1,0 +1,189 @@
+.github-connect-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  position: relative;
+}
+
+.github-button {
+  background: #24292e;
+  color: white;
+  border: 2px solid #24292e;
+  border-radius: 12px;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(36, 41, 46, 0.2);
+}
+
+.github-button:hover {
+  background: #1b1f23;
+  border-color: #1b1f23;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(36, 41, 46, 0.4);
+}
+
+.github-button:active {
+  transform: translateY(0);
+}
+
+.github-button.connected {
+  background: white;
+  color: #24292e;
+  border-color: #e1e4e8;
+}
+
+.github-button.connected:hover {
+  background: #f6f8fa;
+  border-color: #d1d5da;
+}
+
+.github-button.connected .disconnect-icon {
+  margin-left: 4px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.github-button.connected:hover .disconnect-icon {
+  opacity: 1;
+  color: #cb2431;
+}
+
+.github-button.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.github-error-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #cb2431;
+  font-size: 0.875rem;
+  background: #ffeef0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ffdce0;
+}
+
+.empty-repo-guide {
+  background: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 12px;
+  padding: 16px;
+  width: 100%;
+  min-width: 320px;
+  max-width: 400px;
+  box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  z-index: 50;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.guide-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.guide-header h4 {
+  margin: 0;
+  color: #24292e;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.guide-description {
+  margin: 0 0 16px 0;
+  color: #586069;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.guide-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #f6f8fa;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #24292e;
+}
+
+.step code {
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  font-size: 0.75rem;
+  background: rgba(27, 31, 35, 0.05);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.guide-dismiss {
+  width: 100%;
+  background: white;
+  color: #24292e;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.guide-dismiss:hover {
+  background: #f6f8fa;
+}
+
+@media (max-width: 768px) {
+  .github-button {
+    padding: 10px 16px;
+    font-size: 0.875rem;
+  }
+
+  .github-button span {
+    display: none;
+  }
+  
+  .github-button.connected .disconnect-icon {
+    display: none;
+  }
+  
+  .empty-repo-guide {
+    position: fixed;
+    top: auto;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    width: auto;
+    max-width: none;
+  }
+}

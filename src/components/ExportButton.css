@@ -1,0 +1,37 @@
+.export-button {
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+  border-radius: 12px;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.export-button:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+.export-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .export-button {
+    padding: 10px 16px;
+    font-size: 0.875rem;
+  }
+
+  .export-button span {
+    display: none;
+  }
+}

@@ -1,0 +1,284 @@
+.workstream-slide {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+
+.workstream-slide .slide-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.progress-section {
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.progress-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.progress-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.progress-bar-container.large {
+  height: 12px;
+  background: #e2e8f0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.workstream-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.content-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 16px;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-item {
+  background: #f7fafc;
+  border-radius: 12px;
+  padding: 16px;
+  border-left: 4px solid #667eea;
+  transition: transform 0.2s ease;
+}
+
+.task-item:hover {
+  transform: translateX(4px);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.task-name {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 0.95rem;
+}
+
+.task-status {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.task-status.complete {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+.task-status.in-progress {
+  background: #feebc8;
+  color: #7c2d12;
+}
+
+.task-status.pending {
+  background: #e2e8f0;
+  color: #2d3748;
+}
+
+.task-details {
+  display: flex;
+  gap: 16px;
+  font-size: 0.875rem;
+  color: #718096;
+}
+
+.task-owner,
+.task-date {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.milestone-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.milestone-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.milestone-indicator {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.milestone-indicator.complete {
+  background: #48bb78;
+  box-shadow: 0 0 0 4px rgba(72, 187, 120, 0.2);
+}
+
+.milestone-indicator.in-progress {
+  background: #ed8936;
+  box-shadow: 0 0 0 4px rgba(237, 137, 54, 0.2);
+}
+
+.milestone-indicator.upcoming {
+  background: #cbd5e0;
+  box-shadow: 0 0 0 4px rgba(203, 213, 224, 0.2);
+}
+
+.milestone-indicator.at-risk {
+  background: #f56565;
+  box-shadow: 0 0 0 4px rgba(245, 101, 101, 0.2);
+}
+
+.milestone-content {
+  flex: 1;
+}
+
+.milestone-name {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.milestone-date {
+  font-size: 0.875rem;
+  color: #718096;
+}
+
+.risk-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.risk-item {
+  border-radius: 12px;
+  padding: 16px;
+  border-left: 4px solid;
+  background: #f7fafc;
+}
+
+.risk-item.high {
+  border-left-color: #f56565;
+  background: #fff5f5;
+}
+
+.risk-item.medium {
+  border-left-color: #ed8936;
+  background: #fffaf0;
+}
+
+.risk-item.low {
+  border-left-color: #48bb78;
+  background: #f0fff4;
+}
+
+.risk-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.risk-severity {
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.risk-item.high .risk-severity {
+  background: #f56565;
+  color: white;
+}
+
+.risk-item.medium .risk-severity {
+  background: #ed8936;
+  color: white;
+}
+
+.risk-item.low .risk-severity {
+  background: #48bb78;
+  color: white;
+}
+
+.risk-description {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 0.95rem;
+}
+
+.risk-mitigation {
+  font-size: 0.875rem;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+.risk-mitigation strong {
+  color: #2d3748;
+}
+
+@media (max-width: 1024px) {
+  .workstream-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .workstream-slide .slide-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .progress-section {
+    padding: 20px;
+  }
+
+  .task-item {
+    padding: 12px;
+  }
+}
